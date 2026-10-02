@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ronella E. Koshy | Digital Media & Animation Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#04060f;--cyan:#00f0ff;--violet:#7000ff;--pink:#ff007f;--ink:#e8ecf5;--mute:#93a0bf;--panel:rgba(9,13,28,.68);--line:rgba(0,240,255,.22);color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 80px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Rajdhani','Segoe UI',system-ui,sans-serif;font-size:1.2rem;line-height:1.55;overflow-x:hidden}
+#gl{position:fixed;inset:0;width:100%;height:100%;z-index:0;display:block}
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+h1,h2,h3{font-family:'Orbitron','Trebuchet MS',sans-serif;margin:0;line-height:1.15}
+p{margin:0}
+
+header{position:fixed;top:0;left:0;right:0;z-index:20;padding:calc(env(safe-area-inset-top,0px) + 12px) 24px 12px;background:rgba(4,6,15,.55);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.bar{max-width:1120px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{font-family:'Orbitron',sans-serif;font-weight:700;font-size:1.05rem;letter-spacing:.08em;display:flex;align-items:center;gap:10px}
+.brand i{width:12px;height:12px;background:var(--cyan);box-shadow:0 0 12px var(--cyan);transform:rotate(45deg);animation:pulse 2.4s ease-in-out infinite}
+nav{display:flex;gap:28px;font-weight:600;color:var(--mute)}
+nav a:hover{color:var(--cyan)}
+.btn{display:inline-block;font-family:'Orbitron',sans-serif;font-weight:700;font-size:.82rem;letter-spacing:.06em;padding:12px 22px;border-radius:4px;border:1px solid var(--cyan);color:var(--cyan);background:rgba(0,240,255,.08);transition:background .2s,box-shadow .2s,transform .2s}
+.btn:hover{background:rgba(0,240,255,.22);box-shadow:0 0 22px rgba(0,240,255,.45);transform:translateY(-2px)}
+.btn.solid{background:linear-gradient(90deg,var(--cyan),#2d7bff);color:#021018;border-color:transparent}
+.btn.alt{border-color:rgba(160,110,255,.6);color:#c9a8ff;background:rgba(112,0,255,.14)}
+
+main{position:relative;z-index:10;max-width:1120px;margin:0 auto;padding:130px 24px 80px;display:grid;gap:110px}
+.panel{position:relative;background:var(--panel);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:6px;padding:32px;box-shadow:0 10px 40px rgba(0,0,0,.45),inset 0 0 22px rgba(0,240,255,.04);transition:border-color .25s,box-shadow .25s}
+.panel:hover{border-color:rgba(0,240,255,.55);box-shadow:0 14px 48px rgba(0,240,255,.16),inset 0 0 26px rgba(0,240,255,.08)}
+.panel::before,.panel::after{content:"";position:absolute;width:14px;height:14px;pointer-events:none}
+.panel::before{top:-1px;left:-1px;border-top:2px solid var(--cyan);border-left:2px solid var(--cyan)}
+.panel::after{bottom:-1px;right:-1px;border-bottom:2px solid var(--pink);border-right:2px solid var(--pink)}
+
+.hero{min-height:78vh;display:flex;align-items:center}
+.hero .panel{max-width:660px;padding:44px}
+.hero .panel>*{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+.hero .panel>:nth-child(2){animation-delay:.12s}.hero .panel>:nth-child(3){animation-delay:.24s}.hero .panel>:nth-child(4){animation-delay:.36s}.hero .panel>:nth-child(5){animation-delay:.48s}.hero .panel>:nth-child(6){animation-delay:.6s}
+.chip{display:inline-block;font-weight:600;font-size:.95rem;color:var(--cyan);border:1px solid rgba(0,240,255,.35);background:rgba(0,240,255,.08);border-radius:99px;padding:3px 14px;margin-bottom:22px}
+h1{font-size:clamp(2.3rem,7.2vw,4.6rem);font-weight:900;letter-spacing:-.01em;margin-bottom:14px;background:linear-gradient(95deg,#fff 0%,var(--cyan) 38%,#9b5cff 72%,var(--pink) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 18px rgba(0,240,255,.3))}
+.role{font-family:'Orbitron',sans-serif;font-weight:500;font-size:clamp(1.05rem,2.4vw,1.4rem);color:#7fe9f2;margin-bottom:20px}
+.lead{color:#c3cce2;max-width:56ch;margin-bottom:28px}
+.row{display:flex;flex-wrap:wrap;gap:14px}
+.meta{margin-top:28px;padding-top:20px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-wrap:wrap;gap:8px 26px;color:var(--mute);font-size:1.05rem}
+.hint{margin-top:14px;color:var(--mute);font-size:1rem}
+
+.sec-title{display:flex;flex-direction:column;gap:4px;margin-bottom:28px}
+.sec-title h2{font-size:clamp(1.6rem,4vw,2.2rem);font-weight:700}
+.sec-title span{color:var(--mute);font-size:1.05rem}
+.about{display:grid;grid-template-columns:2fr 1fr;gap:28px}
+.about h3,.edu h3,.int h3{font-size:1.25rem;font-weight:700;margin-bottom:14px}
+.about p{color:#c3cce2;max-width:62ch}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:26px;padding-top:24px;border-top:1px solid rgba(255,255,255,.08)}
+.fact{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:4px;padding:14px 16px}
+.fact small{display:block;color:var(--mute);font-size:.95rem}
+.fact b{font-family:'Orbitron',sans-serif;font-weight:500;font-size:.95rem;color:#7fe9f2}
+.focus{display:grid;gap:14px;list-style:none;margin:0;padding:0}
+.focus li{padding:14px 16px;border-radius:4px;background:rgba(255,255,255,.04);border-left:3px solid var(--c)}
+.focus b{display:block;font-family:'Orbitron',sans-serif;font-weight:700;font-size:.95rem;color:var(--c);margin-bottom:4px}
+.focus span{color:var(--mute);font-size:1.02rem;line-height:1.4;display:block}
+
+.two{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.edu .tag{position:absolute;top:0;right:0;font-size:.9rem;font-weight:700;color:var(--cyan);padding:3px 14px;background:linear-gradient(270deg,rgba(0,240,255,.2),transparent);border-bottom:1px solid var(--line);border-left:1px solid var(--line)}
+.edu h3{color:var(--cyan)}.edu.v h3{color:#bd96ff}
+.edu .big{font-weight:700;font-size:1.3rem;color:#fff}
+.edu .where{color:var(--mute);margin-bottom:20px}
+.edu hr{border:0;border-top:1px solid rgba(255,255,255,.08);margin:0 0 16px}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tags span{font-weight:600;font-size:1rem;color:#7fe9f2;padding:4px 12px;border-radius:4px;border:1px solid rgba(0,240,255,.3);background:rgba(0,240,255,.08);transition:background .2s,box-shadow .2s}
+.tags span:hover{background:rgba(0,240,255,.26);box-shadow:0 0 14px rgba(0,240,255,.4)}
+.int h3{color:var(--pink)}.int.c h3{color:var(--cyan)}
+.int p{color:#c3cce2}
+
+.contact{max-width:860px;margin:0 auto;text-align:center;width:100%}
+.contact h2{font-size:clamp(1.8rem,5vw,2.8rem);font-weight:900;margin-bottom:10px;text-shadow:0 0 22px rgba(0,240,255,.45)}
+.contact>p{color:#c3cce2;margin-bottom:28px}
+.links{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.links a{display:flex;flex-direction:column;gap:2px;padding:18px 12px;border-radius:4px;background:rgba(5,8,18,.8);border:1px solid var(--k);transition:background .2s,transform .2s,box-shadow .2s}
+.links a:hover{transform:translateY(-3px);box-shadow:0 0 22px var(--k)}
+.links small{color:var(--mute);font-size:.95rem}
+.links b{font-family:'Orbitron',sans-serif;font-weight:700;font-size:.95rem;color:var(--t)}
+
+footer{position:relative;z-index:10;text-align:center;padding:26px 24px 34px;color:var(--mute);font-size:1rem;background:rgba(4,6,15,.82);border-top:1px solid rgba(255,255,255,.06)}
+.hud{position:fixed;left:18px;bottom:calc(env(safe-area-inset-bottom,0px) + 14px);z-index:15;pointer-events:none;font-weight:600;font-size:.9rem;color:rgba(0,240,255,.75);line-height:1.35;text-shadow:0 0 8px rgba(0,240,255,.5)}
+.hud b{color:#fff;font-weight:600}
+
+@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes pulse{50%{opacity:.4}}
+@media (max-width:860px){.about,.two{grid-template-columns:1fr}nav{display:none}.links{grid-template-columns:1fr}main{gap:80px}.hud{display:none}.hero .panel{padding:30px 24px}}
+@media (prefers-reduced-motion:reduce){.hero .panel>*,.brand i{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<canvas id="gl" aria-hidden="true"></canvas>
+
+<header>
+  <div class="bar">
+    <a href="#top" class="brand"><i></i>Ronella Koshy</a>
+    <nav>
+      <a href="#about">About</a><a href="#focus">Focus</a><a href="#education">Education</a><a href="#interests">Interests</a><a href="#contact">Contact</a>
+    </nav>
+    <a href="#contact" class="btn">Connect</a>
+  </div>
+</header>
+
+<div class="hud" aria-hidden="true">fps <b id="fps">60</b><br>cam <b id="cam">0.0 4.0 24.0</b></div>
+
+<main id="top">
+  <section class="hero">
+    <div class="panel">
+      <span class="chip">Unreal and Unity inspired real-time scene</span>
+      <h1>Ronella E. Koshy</h1>
+      <p class="role">Digital Media &amp; Animation student</p>
+      <p class="lead">Passionate about visual storytelling, 2D/3D animation, character design, and sequence creation. I bring imaginative ideas to life through dynamic design principles and real-time visual aesthetics.</p>
+      <div class="row">
+        <a href="#focus" class="btn solid">Explore my focus</a>
+        <a href="#contact" class="btn alt">Get in touch</a>
+      </div>
+      <div class="meta"><span>Bengaluru, KA, India</span><span>St. Joseph's University</span></div>
+      <p class="hint">Move your cursor to steer the scene. Click to send a shockwave.</p>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="panel">
+      <h3>Professional summary</h3>
+      <p>Enthusiastic and creative Digital Media and Animation student at St. Joseph's University with a strong foundation in visual storytelling, design principles, and digital animation techniques. Passionate about bringing ideas to life through art, character design, and sequence creation. Highly motivated to learn and contribute to dynamic creative teams.</p>
+      <div class="facts">
+        <div class="fact"><small>Date of birth</small><b>November 29, 2005</b></div>
+        <div class="fact"><small>Languages</small><b>English</b></div>
+      </div>
+    </div>
+    <div class="panel" id="focus">
+      <h3 style="font-size:1.2rem;margin-bottom:16px">Areas of focus</h3>
+      <ul class="focus">
+        <li style="--c:#bd96ff"><b>Visual storytelling</b><span>Narrative building, emotional expression, and conceptual world-building.</span></li>
+        <li style="--c:var(--cyan)"><b>Character design</b><span>Concept development, turnarounds, key poses, and styling.</span></li>
+        <li style="--c:var(--pink)"><b>Sequence creation</b><span>Storyboarding, motion pacing, and narrative flow execution.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="sec-title"><h2>Education</h2><span>Where I'm learning the craft</span></div>
+    <div class="two">
+      <div class="panel edu">
+        <span class="tag">In progress</span>
+        <h3>Bachelor of Vocation (B.Voc.)</h3>
+        <p class="big">Digital Media &amp; Animation</p>
+        <p class="where">St. Joseph's University, Bengaluru</p>
+        <hr>
+        <p style="color:var(--mute);font-size:1rem;margin-bottom:10px">Relevant coursework</p>
+        <div class="tags"><span>Digital Illustration</span><span>2D/3D Animation</span><span>Character Design</span><span>Storyboarding</span><span>Film &amp; Visual Aesthetics</span></div>
+      </div>
+      <div class="panel edu v">
+        <h3>Senior Secondary / High School</h3>
+        <p class="big">High School Certification</p>
+        <p class="where">National Institute of Open Schooling (NIOS)</p>
+        <hr>
+        <p style="color:#c3cce2;font-size:1.05rem">Structured independent education focused on art fundamentals, multimedia techniques, and creative studio studies.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="interests">
+    <div class="sec-title"><h2>Hobbies &amp; interests</h2><span>What keeps me inspired</span></div>
+    <div class="two">
+      <div class="panel int"><h3>Anime &amp; manga</h3><p>Enthusiastic reader and viewer, analyzing narrative structures, cinematography, art styles, and character design.</p></div>
+      <div class="panel int c"><h3>Arts &amp; crafts</h3><p>Hands-on creative projects, traditional sketching, model making, and visual arts explorations.</p></div>
+    </div>
+  </section>
+
+  <section id="contact" class="panel contact">
+    <h2>Get in touch</h2>
+    <p>Interested in collaboration, creative roles, or dynamic team projects.</p>
+    <div class="links">
+      <a href="mailto:ronella.koshy@example.com" style="--k:rgba(0,240,255,.4);--t:#7fe9f2"><small>Email</small><b>Ronella E. Koshy</b></a>
+      <a href="#" style="--k:rgba(160,110,255,.45);--t:#c9a8ff"><small>Portfolio on ArtStation</small><b>View works</b></a>
+      <a href="#" style="--k:rgba(255,0,127,.45);--t:#ff8cc0"><small>LinkedIn</small><b>Connect</b></a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2026 Ronella E. Koshy. All rights reserved.</p>
+  <p style="margin-top:4px;color:rgba(0,240,255,.6)">Real-time scene built with Three.js</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function(){
+  if(!window.THREE) return;
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var renderer;
+  try{renderer=new THREE.WebGLRenderer({canvas:document.getElementById('gl'),antialias:true});}catch(e){return;}
+  renderer.setPixelRatio(Math.min(devicePixelRatio,1.75));
+  renderer.setSize(innerWidth,innerHeight);
+  var scene=new THREE.Scene();
+  scene.background=new THREE.Color(0x04060f);
+  scene.fog=new THREE.FogExp2(0x04060f,0.017);
+  var cam=new THREE.PerspectiveCamera(60,innerWidth/innerHeight,.1,400);
+  cam.position.set(0,4,24);
+
+  scene.add(new THREE.AmbientLight(0x4455aa,.55));
+  var lc=new THREE.PointLight(0x00f0ff,2.2,70);lc.position.set(-14,8,6);scene.add(lc);
+  var lp=new THREE.PointLight(0xff007f,2,70);lp.position.set(16,-2,4);scene.add(lp);
+  var lm=new THREE.PointLight(0xffffff,3.2,28);scene.add(lm);
+
+  /* Terrain: wireframe grid that ripples under the cursor */
+  var FY=-9;
+  var tg=new THREE.PlaneGeometry(240,160,70,48);tg.rotateX(-Math.PI/2);
+  var terrain=new THREE.Mesh(tg,new THREE.MeshBasicMaterial({color:0x7a2bff,wireframe:true,transparent:true,opacity:.42}));
+  terrain.position.set(0,FY,-34);scene.add(terrain);
+  var tp=tg.attributes.position, tb=Float32Array.from(tp.array);
+
+  /* Hero core */
+  var hero=new THREE.Group();scene.add(hero);
+  var ico=new THREE.Mesh(new THREE.IcosahedronGeometry(4.2,1),new THREE.MeshStandardMaterial({color:0x0a1030,emissive:0x00a0b0,emissiveIntensity:.35,metalness:.7,roughness:.25,flatShading:true}));
+  var wire=new THREE.Mesh(new THREE.IcosahedronGeometry(4.6,1),new THREE.MeshBasicMaterial({color:0x00f0ff,wireframe:true,transparent:true,opacity:.3}));
+  var inner=new THREE.Mesh(new THREE.OctahedronGeometry(1.9),new THREE.MeshBasicMaterial({color:0xff007f,wireframe:true}));
+  var r1=new THREE.Mesh(new THREE.TorusGeometry(6.6,.045,8,140),new THREE.MeshBasicMaterial({color:0x00f0ff}));r1.rotation.x=1.2;
+  var r2=new THREE.Mesh(new THREE.TorusGeometry(7.8,.045,8,140),new THREE.MeshBasicMaterial({color:0xff007f}));r2.rotation.y=1.1;
+  hero.add(ico,wire,inner,r1,r2);
+
+  /* Floating crystals */
+  var geos=[new THREE.OctahedronGeometry(1),new THREE.IcosahedronGeometry(.85,0),new THREE.TetrahedronGeometry(1.15)];
+  var cols=[0x00f0ff,0x7000ff,0xff007f], crystals=[];
+  for(var i=0;i<32;i++){
+    var c=cols[i%3];
+    var m=new THREE.Mesh(geos[i%3],new THREE.MeshStandardMaterial({color:c,emissive:c,emissiveIntensity:.28,metalness:.6,roughness:.3,flatShading:true}));
+    m.scale.setScalar(.5+Math.random()*1.3);
+    var home=new THREE.Vector3((Math.random()-.5)*64,(Math.random()-.3)*24,-6-Math.random()*36);
+    m.position.copy(home);
+    m.userData={home:home,vel:new THREE.Vector3(),rx:(Math.random()-.5)*.012,ry:(Math.random()-.5)*.012,ph:Math.random()*6.28};
+    scene.add(m);crystals.push(m);
+  }
+
+  /* Particles */
+  var N=520, pg=new THREE.BufferGeometry(), pa=new Float32Array(N*3), pc=new Float32Array(N*3), c1=new THREE.Color(0x00f0ff), c2=new THREE.Color(0xb04bff);
+  for(var j=0;j<N;j++){
+    pa[j*3]=(Math.random()-.5)*110;pa[j*3+1]=Math.random()*55-12;pa[j*3+2]=(Math.random()-.5)*90-10;
+    var cc=c1.clone().lerp(c2,Math.random());pc[j*3]=cc.r;pc[j*3+1]=cc.g;pc[j*3+2]=cc.b;
+  }
+  pg.setAttribute('position',new THREE.BufferAttribute(pa,3));pg.setAttribute('color',new THREE.BufferAttribute(pc,3));
+  scene.add(new THREE.Points(pg,new THREE.PointsMaterial({size:.32,vertexColors:true,transparent:true,opacity:.75})));
+
+  /* Layout depends on viewport */
+  function layout(){
+    var wide=innerWidth>900;
+    hero.position.set(wide?10:0,wide?3.5:8,wide?-9:-14);
+    hero.scale.setScalar(wide?1:.7);
+  }
+  layout();
+
+  /* Input */
+  var mx=0,my=0,sx=0,sy=0,ndc=new THREE.Vector2(0,0),ray=new THREE.Raycaster(),plane=new THREE.Plane(new THREE.Vector3(0,1,0),-FY),hit=new THREE.Vector3(),tmp=new THREE.Vector3(),ringR=-1,hitOK=false;
+  addEventListener('pointermove',function(e){mx=e.clientX/innerWidth*2-1;my=e.clientY/innerHeight*2-1;ndc.set(mx,-my);});
+  addEventListener('pointerdown',function(e){
+    ndc.set(e.clientX/innerWidth*2-1,-(e.clientY/innerHeight*2-1));ray.setFromCamera(ndc,cam);
+    if(reduce) return;
+    ringR=0;
+    var o=ray.ray.origin.clone().addScaledVector(ray.ray.direction,20);
+    crystals.forEach(function(m){
+      var d=m.position.distanceTo(o); if(d<26){tmp.copy(m.position).sub(o).normalize();m.userData.vel.addScaledVector(tmp,(26-d)*.045);}
+    });
+  });
+  addEventListener('resize',function(){cam.aspect=innerWidth/innerHeight;cam.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight);layout();});
+
+  /* Loop */
+  var last=performance.now(),t=0,fc=0,fa=0,fpsEl=document.getElementById('fps'),camEl=document.getElementById('cam');
+  function tick(now){
+    requestAnimationFrame(tick);
+    var dt=Math.min((now-last)/1000,.05);last=now;t+=dt*(reduce?.25:1);
+    sx+=(mx-sx)*.06;sy+=(my-sy)*.06;
+    var sp=Math.min(scrollY/Math.max(1,document.body.scrollHeight-innerHeight),1);
+    cam.position.set(sx*4,4-sy*2.2-sp*3,24-sp*10);
+    cam.lookAt(-sx*1.5,1.5-sp*2,-8);
+
+    ray.setFromCamera(ndc,cam);
+    hitOK=!!ray.ray.intersectPlane(plane,hit);
+    lm.position.copy(ray.ray.origin).addScaledVector(ray.ray.direction,20);
+
+    /* terrain waves + cursor bump + click ring */
+    if(ringR>=0){ringR+=dt*42;if(ringR>70)ringR=-1;}
+    var lx=hit.x-terrain.position.x, lz=hit.z-terrain.position.z, arr=tp.array;
+    for(var k=0;k<arr.length;k+=3){
+      var x=tb[k],z=tb[k+2],y=Math.sin(x*.12+t)*Math.cos(z*.1+t*.7)*1.5;
+      if(hitOK){var dx=x-lx,dz=z-lz,d2=dx*dx+dz*dz;y+=3.4*Math.exp(-d2/80);
+        if(ringR>=0){var d=Math.sqrt(d2)-ringR;y+=3*Math.exp(-d*d/10)*(1-ringR/70);}}
+      arr[k+1]=y;
+    }
+    tp.needsUpdate=true;
+
+    /* hero */
+    ico.rotation.x=t*.2;ico.rotation.y=t*.3;wire.rotation.x=-t*.12;wire.rotation.y=t*.18;
+    inner.rotation.x=-t*.6;inner.rotation.y=-t*.45;r1.rotation.z=t*.4;r2.rotation.z=-t*.3;
+    hero.position.y+=((innerWidth>900?3.5:8)+Math.sin(t*1.2)*.5-hero.position.y)*.05;
+
+    /* crystals: spring home, float, repel from cursor ray */
+    for(var q=0;q<crystals.length;q++){
+      var m=crystals[q],u=m.userData;
+      ray.ray.closestPointToPoint(m.position,tmp);
+      var dd=tmp.distanceTo(m.position);
+      if(dd<8){tmp.subVectors(m.position,tmp).normalize();u.vel.addScaledVector(tmp,(8-dd)*.012);}
+      u.vel.x+=(u.home.x-m.position.x)*.012;
+      u.vel.y+=(u.home.y+Math.sin(t*1.5+u.ph)*1.2-m.position.y)*.012;
+      u.vel.z+=(u.home.z-m.position.z)*.012;
+      u.vel.multiplyScalar(.91);m.position.add(u.vel);
+      m.rotation.x+=u.rx+u.vel.length()*.05;m.rotation.y+=u.ry+u.vel.length()*.05;
+    }
+
+    /* particles drift upward */
+    var pp=pg.attributes.position.array;
+    for(var p=1;p<pp.length;p+=3){pp[p]+=dt*(.8+(p%7)*.12);if(pp[p]>43)pp[p]=-12;}
+    pg.attributes.position.needsUpdate=true;
+
+    renderer.render(scene,cam);
+
+    fc++;fa+=dt;
+    if(fa>.5){fpsEl.textContent=Math.round(fc/fa);camEl.textContent=cam.position.x.toFixed(1)+' '+cam.position.y.toFixed(1)+' '+cam.position.z.toFixed(1);fc=0;fa=0;}
+  }
+  requestAnimationFrame(tick);
+})();
+</script>
+</body>
+</html>
